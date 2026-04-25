@@ -1,0 +1,35 @@
+[build-system]
+requires = ["meson-python", "vapoursynth"]
+build-backend = "mesonpy"
+
+[project]
+name = "vapoursynth-timecube"
+description = "A plugin to apply 3D LUTs for VapourSynth"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "WTFPL"
+license-files = ["COPYING"]
+authors = [
+    {name = "Fredrik Mellbin", email = "fredrik.mellbin@gmail.com"},
+]
+keywords = ["source", "video", "lut"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: C++",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = ["VapourSynth"]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/sekrit-twc/timecube.git"
+Issues = "https://github.com/sekrit-twc/timecube/issues"
+
+[tool.meson-python.wheel]
+exclude = ["*/*.dll.a", "*/*.lib"]
