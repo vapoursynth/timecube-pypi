@@ -3,7 +3,7 @@ project('TIMECUBE', 'cpp',
     license: 'WTFPL',
     license_files: 'COPYING',
     meson_version: '>=1.2.3',
-    version: '3.2',
+    version: '4.0',
 )
 
 graphengine_sources = [
